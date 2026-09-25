@@ -25,7 +25,7 @@ export default function CTASection() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/919052612450"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-600 bg-ink-800 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-green-500 hover:bg-green-500 hover:-translate-y-0.5"

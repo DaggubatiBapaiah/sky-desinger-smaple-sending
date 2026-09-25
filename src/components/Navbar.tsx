@@ -54,7 +54,7 @@ export default function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden items-center gap-2 lg:flex">
             <a
-              href="https://wa.me/"
+              href="https://wa.me/919052612450"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-all duration-300 hover:border-green-500 hover:bg-green-50 hover:text-green-600"
@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* Mobile controls */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="https://wa.me/"
+              href="https://wa.me/919052612450"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700"

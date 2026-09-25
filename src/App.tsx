@@ -1,50 +1,43 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PromoBar from '@/components/PromoBar';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import TrustBar from '@/components/TrustBar';
-import CategoryGrid from '@/components/CategoryGrid';
-import PopularProducts from '@/components/PopularProducts';
-import CustomerSegments from '@/components/CustomerSegments';
-import FeaturedProducts from '@/components/FeaturedProducts';
-import BusinessSolutions from '@/components/BusinessSolutions';
-import ProcessSteps from '@/components/ProcessSteps';
-import DesignSupport from '@/components/DesignSupport';
-import PortfolioGrid from '@/components/PortfolioGrid';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import LocalBusinessSection from '@/components/LocalBusinessSection';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import CTASection from '@/components/CTASection';
-import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import Home from '@/pages/Home';
+import CategoryPage from '@/pages/CategoryPage';
+import { ProductProvider } from '@/context/ProductContext';
+import AdminLayout from '@/pages/admin/AdminLayout';
+import AdminDashboard from '@/pages/admin/AdminDashboard';
+import AdminProducts from '@/pages/admin/AdminProducts';
+
 
 function App() {
   return (
-    <>
-      <PromoBar />
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustBar />
-        <CategoryGrid />
-        <PopularProducts />
-        <CustomerSegments />
-        <FeaturedProducts />
-        <BusinessSolutions />
-        <ProcessSteps />
-        <DesignSupport />
-        <PortfolioGrid />
-        <WhyChooseUs />
-        <LocalBusinessSection />
-        <Testimonials />
-        <FAQ />
-        <CTASection />
-        <ContactForm />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </>
+    <ProductProvider>
+      <Router>
+        <Routes>
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="products" element={<AdminProducts />} />
+          </Route>
+
+          {/* Public Routes */}
+          <Route path="*" element={
+            <>
+              <PromoBar />
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/category/:categoryId" element={<CategoryPage />} />
+              </Routes>
+              <Footer />
+              <FloatingWhatsApp />
+            </>
+          } />
+        </Routes>
+      </Router>
+    </ProductProvider>
   );
 }
 

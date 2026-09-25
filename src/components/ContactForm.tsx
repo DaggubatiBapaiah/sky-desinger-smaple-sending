@@ -133,7 +133,7 @@ export default function ContactForm() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-ink-900">WhatsApp</p>
-                      <p className="text-sm text-ink-400">WhatsApp number to be added</p>
+                      <p className="text-sm text-ink-400">+91 90526 12450</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -161,7 +161,7 @@ export default function ContactForm() {
                 <h3 className="text-base font-bold">Quick Contact</h3>
                 <p className="mt-2 text-sm text-ink-300">Prefer to talk directly? Reach us on WhatsApp for a quick response.</p>
                 <a
-                  href="https://wa.me/"
+                  href="https://wa.me/919052612450"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-green-600"

@@ -38,7 +38,7 @@ export default function Hero() {
               Get a Quote
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#services" className="btn-secondary">Explore Services</a>
+            <a href="#services" className="btn-secondary">View Products</a>
           </div>
         </div>
 
