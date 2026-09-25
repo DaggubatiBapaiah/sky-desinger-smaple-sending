@@ -45,8 +45,8 @@ export default function AdminProducts() {
         ))}
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-ink-100 overflow-hidden">
-        <table className="w-full text-left">
+      <div className="bg-white rounded-xl shadow-sm border border-ink-100 overflow-x-auto">
+        <table className="w-full text-left min-w-[800px]">
           <thead className="bg-ink-50">
             <tr className="text-ink-600 border-b border-ink-100">
               <th className="px-6 py-4 font-medium">Image</th>

@@ -3,15 +3,17 @@ import { LayoutDashboard, Package, DollarSign, Users, Settings, LogOut } from 'l
 
 export default function AdminLayout() {
   return (
-    <div className="min-h-screen bg-ink-50 flex">
+    <div className="min-h-screen bg-ink-50 flex flex-col md:flex-row">
       {/* Sidebar */}
-      <aside className="w-64 bg-white border-r border-ink-100 flex flex-col">
-        <div className="p-6 border-b border-ink-100">
-          <h1 className="text-xl font-bold text-ink-900">Sky Printers</h1>
-          <p className="text-sm text-ink-400">Admin Panel</p>
+      <aside className="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-ink-100 flex flex-col">
+        <div className="p-4 md:p-6 border-b border-ink-100 flex justify-between items-center">
+          <div>
+            <h1 className="text-xl font-bold text-ink-900">Sky Printers</h1>
+            <p className="text-sm text-ink-400">Admin Panel</p>
+          </div>
         </div>
         
-        <nav className="flex-1 p-4 space-y-2">
+        <nav className="flex-1 p-4 flex flex-row md:flex-col gap-2 overflow-x-auto">
           <Link to="/admin" className="flex items-center gap-3 px-4 py-3 text-brand-500 bg-brand-50 rounded-lg font-medium">
             <LayoutDashboard size={20} /> Dashboard
           </Link>
